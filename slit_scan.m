@@ -100,15 +100,17 @@ disp('Done!');
 %% Reconstruction
 disp('Reconstrucion');
 
-base_folder = 'C:\Users\croma\Documents\DivyaASI';
+% base_folder = 'C:\Users\croma\Documents\DivyaASI';
 plyfile = 'plyfile.ply';
 step = 1;
 start = 20;
 final = 40;
+
 % Calibration
-load('C:\Users\croma\Documents\DivyaASI\calibrationSession3.mat');
+% Load the mat file obtained after calibration
+load('C:\Users\croma\Documents\DivyaASI\calibrationSession3.mat'); 
 stereoParams = calibrationSession.CameraParameters;
 % calculating F matrix
 F = stereoParams.FundamentalMatrix;
-eyeRecons(F, start, final, base_folder, iml, imr, plyfile, step, stereoParams);
+eyeRecons(F, start, final, iml, imr, plyfile, step, stereoParams);
 disp('Reconstruction done, please check the PLY file');
