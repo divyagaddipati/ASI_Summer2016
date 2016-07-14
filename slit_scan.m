@@ -20,21 +20,6 @@ release(v1); release(v2);
 v1.VideoFormat = 'F7_RGB_1288x964_Mode0';
 v2.VideoFormat = 'F7_RGB_1288x964_Mode0';
 
-% v1 = videoinput('pointgrey', 1, 'F7_RGB_1288x964_Mode0'); % Left
-% v2 = videoinput('pointgrey', 2, 'F7_RGB_1288x964_Mode0'); % Right
-% v1.ReturnedColorSpace = 'rgb';
-% v2.ReturnedColorSpace = 'rgb'; 
-% src = getselectedsource(v1);
-% src2 = getselectedsource(v2);
-% src.WhiteBalanceRBMode = 'Off';
-% src2.WhiteBalanceRBMode = 'Off';
-% 
-% promptMessage = sprintf('Do you want to see the preview of the cameras?');
-% titleBarCaption = '';
-% button = questdlg(promptMessage, titleBarCaption, 'Yes', 'No', 'Yes');
-% if strcmpi(button, 'Yes')
-% 	show_preview(v1,v2);
-% end
 pause(0.75);
 
 % Creating folders for the images.
