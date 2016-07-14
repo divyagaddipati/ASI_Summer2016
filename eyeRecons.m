@@ -75,11 +75,11 @@ for i = start:final
     % For right camera image
     
     right = imr{i};
-    right_img1 = right(:,:,2);  % Taking the green channel
+    right_img = right(:,:,2);  % Taking the green channel
 %     To remove noise
-    rect = [10 15 40 40];
-    [J,~] = SRAD(right_img1,30,0.9,rect);
-    right_img = J;    
+%     rect = [10 15 40 40];
+%     [J,~] = SRAD(right_img1,30,0.9,rect);
+%     right_img = J;    
     right_img_bw = im2bw(im2double(right_img), threshR);
     
 %     To reduce the obtained thresholded component to single pixel width
@@ -100,11 +100,11 @@ for i = start:final
 %     For left camera image
     left = iml{i};
     colorImgL = colorImgL + left;    
-    left_img1 = left(:,:,2);
+    left_img = left(:,:,2);
     % To remove noise
-    rect = [10 15 40 40];
-    [J,~] = SRAD(left_img1,30,0.9,rect);
-    left_img = J;
+    % rect = [10 15 40 40];
+    % [J,~] = SRAD(left_img1,30,0.9,rect);
+    % left_img = J;
     left_img_bw = im2bw(im2double(left_img), threshL);
 %     To reduce the obtained thresholded component to single pixel width
 %     component
