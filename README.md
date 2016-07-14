@@ -21,5 +21,5 @@ Reconstruction
 - MeshLab software is required to view the 3D surface.
 
 Softwares required:
-- MATLAB R2015
+- MATLAB R2015 with PointGrey Hardware package installed
 - MeshLab 
