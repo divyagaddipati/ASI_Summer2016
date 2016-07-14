@@ -1,4 +1,6 @@
 function points2ply(PLYfilename, coordinate, rgb, normals)
+% Author : Rajat Aggarwal
+
 % coordinate is 3 * n single matrix for n points
 % rgb        is 3 * n uint8  matrix for n points range [0, 255]
 
